@@ -259,9 +259,9 @@ public class Principal extends Application {
         adicionarLinha("|\t|\taux = vet[0];", j += 25, i++);
         adicionarLinha("|\t|\tvet[0] = vet[TL2 - 1];", j += 25, i++);
         adicionarLinha("|\t|\tvet[TL2 - 1] = aux;", j += 25, i++);
-        adicionarLinha("|\t|\tTL2--;", j += 25, i++);
+        adicionarLinha("|\t|\tTL2--;", j += 25, i);
         adicionarLinha("|\t}", j += 25, -1);
-        adicionarLinha("}", j += 25, -1);
+        adicionarLinha("}", j, -1);
     }
 
     private void iniciarCena(Stage stage) {
@@ -289,11 +289,11 @@ public class Principal extends Application {
     }
 
     public void iniciar() {
-        Task<Void> task = new Task<Void>() {
+        Task<Void> task = new Task<>() {
             private int nivelB;
             private int nivelA;
             private double posA, posB;
-            private final int ms = 300;
+            private final int ms = 250;
 
             @Override
             protected Void call() {
@@ -380,9 +380,7 @@ public class Principal extends Application {
             }
 
             private void diminuirTL2(int TL2) {
-                Platform.runLater(() -> {
-                    botaoTL2.setText("TL2: " + TL2);
-                });
+                Platform.runLater(() -> botaoTL2.setText("TL2: " + TL2));
             }
 
             private void destacarMaior(int maior) {
