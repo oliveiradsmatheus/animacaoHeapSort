@@ -14,6 +14,6 @@
 <div>
   <h3>Apresentação</h3>
   <ul>
-      <img alt="heapsort" src=https://github.com/oliveiradsmatheus/calculadoraJS/blob/main/imagens/calculadora.gif?raw=true>
+      <img alt="heapsort" src="https://github.com/oliveiradsmatheus/animacaoHeapSort/blob/main/imagens/heapsort.gif?raw=true"e>
   </ul>
 </div>
